@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}个人中心{% endblock title %}
+{% block link %}
+	<link rel="stylesheet" type="text/css" href={% static "css/reset.css" %}>
+	<link rel="stylesheet" type="text/css" href={% static "css/personal.css" %}>
+    <style>
+    .header .b_else{
+        height: 50px;
+    }
+    .header .b_else li{
+        margin-top:15px;
+    }
+    </style>
+{% endblock link %}
+
+{% block content %}
+	<div class="pmid_con">
+		<div class="pimg">
+{#			<img src={% static "images/d_bg03.jpg" %} alt="背景图">#}
+		</div>
+		<ul class="pcontent">
+			<div class="time">
+				<div class="p_logo">
+					MOOD DIRAY
+				</div>
+				<br>
+			</div>
+            {% for rd in record %}
+                <li><a href={% url "record:detail" rd.user.id %}?num={{ rd.id }}>{{ rd.title }}<br>
+                    <span class="d_time">{{ rd.c_time }}&nbsp;&nbsp;来自最帅的{{ rd.user.username }}</span>
+                </a></li>
+                <br>
+
+            {% empty %}
+                你还没有发布任何作品
+            {% endfor %}
+            <div class="paginator">
+                {% if record.has_previous%}
+                    <a href="?page=1" class="n_one">&laquo;1</a>
+                    <span>...</span>
+                    <a href="?page={{ record.previous_page_number }}">
+                    {{ record.previous_page_number }}
+                    </a>
+                {% endif %}
+
+
+                <span class="n_active">{{ record.number }}</span>
+
+
+                {% if record.has_next %}
+                    <a href="?page={{ record.next_page_number }}">
+                    {{ record.next_page_number }}
+
+                    </a>
+                    <span>...</span>
+                    <a href="?page={{ record.paginator.num_pages }}" class="n_one">
+                    {{ record.paginator.num_pages }}&raquo;
+                    </a>
+                {% endif %}
+            </div>
+		</ul>
+	</div>
+{% endblock content %}

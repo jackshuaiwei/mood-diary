@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}详情页面{% endblock title%}
+{% block link %}<link rel="stylesheet" type="text/css" href={% static "css/main.css"%}>{% endblock link %}
+{% block script %}
+    <script>
+		$(function(){
+			var t = $(".pre_time");
+			window.setInterval(getTime,500);
+
+			function getTime(){
+				var time = new Date();
+				var h = time.getHours();
+				var m = time.getMinutes();
+				var s = time.getSeconds();
+				var str ="time : " +  h + ":" + m + ":" + s;
+				t.html(str);
+			}
+		})
+	</script>
+{% endblock script %}
+
+{% block content %}
+	<div class="mid_con">
+		<div class="mid_left">
+			<div class="cal">
+				<div class="day">
+					{{ day }}
+				</div>
+				<div class="month">
+					{{ month }}
+					<P></P>	
+					MOOD DIARY
+				</div>
+			</div>
+
+			<div class="share">
+                <a href="#">Share +</a>
+			</div>
+            <div class="pre_time">
+               present time: 14:05
+           </div>
+			<div class="cut_line">
+
+			</div>
+			<div class="content">
+				
+					<div class="content_logo">
+						This is mood diary
+					</div>
+					<div class="content_title">
+						{{ record.title }}
+					</div>
+					<div class="content_con">
+						{{ record.content |safe }}
+					</div>
+			</div>
+		</div>
+
+		<div class="mid_right">
+			<div class="song_name">
+				This is your house,just fun!
+			</div>
+			<div class="bgMusic">
+				<audio  src="{{ record.song_url }}" controls></audio>
+			</div>
+			<!-- <img src="images/d_bg.jpg" alt="幻灯片"> -->
+		</div>
+	</div>
+{% endblock content %}

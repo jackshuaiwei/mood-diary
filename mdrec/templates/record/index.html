@@ -1,0 +1,28 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href={% static "css/index.css" %}>
+	<link href='http://cdn.repository.webfont.com/webfonts/nomal/133315/28831/5da4474df629d808dc2eb104.css' rel='stylesheet' type='text/css' />
+	<link href='http://cdn.repository.webfont.com/webfonts/nomal/133315/46870/5da44a22f629d808dc2eb109.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<div class="welcom">
+		<div class="top">
+			MOOD DIARY
+		</div>
+		<div class="mid css1c6ee6bd73208c3">
+			记&nbsp;&nbsp;录&nbsp&nbsp;·&nbsp;&nbsp;美&nbsp;&nbsp;好&nbsp;&nbsp;心&nbsp;&nbsp;情
+		</div>
+		<div class="btom">
+			在这里你可以用音乐和文字表达你此
+			时此刻的心情，想法，亦或是觉得一首歌
+			中的词触动了你，你也可以通过mood 
+			diary记录下你的感触，<a href={% url 'userprofile:login' %}>玩起来</a>就完事了！
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+body{
+	background-image: url("../images/c_bg02.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment:fixed;
+	position: relative;
+}
+
+
+.con{
+	margin: 100px 100px;
+	width: 550px;
+	height: 800px;
+	color: #fff;
+	overflow: hidden;
+	/* float: left; */
+	/* background-color: gold; */
+}
+.con input{
+	/* margin-top: 10px; */
+	display: block;
+	width: 500px;
+	height: 30px;
+	border-radius: 10px;
+	outline: none;
+	border: 1px solid #fff;
+	text-indent: 10px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0);
+	line-height: 30px;
+	font-size: 16px;
+}
+
+.con textarea{
+	width: 500px;
+	height: 450px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0);
+	outline: none;
+	border-radius: 10px;
+	text-indent: 10px;
+	font-size: 18px;
+}
+.con .title{
+	width: 350px;
+}
+
+.con .c_img_con{
+	position: relative;
+	/* background-color: blue; */
+}
+.con .c_img {
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.con .bg_img{
+	width: 100px;
+	height: 30px;
+	border: 0;
+	background-color: gold;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+
+}
+
+.con .create_sub{
+	width: 60px;
+	height: 30px;
+	float: right;
+	text-align: center;
+	text-indent: 0px;
+}
+.c_logo{
+	width: 500px;
+	height: 300px;
+	color: white;
+	position: absolute;
+	right: 150px;
+	top: 100px;
+	
+
+}
+.c_logo .c_desc1{
+	font-size: 50px;
+	text-align: center;
+}
+
+.c_logo .c_desc2{
+	font-size: 16px;
+	text-align: center;
+}

@@ -1,0 +1,18 @@
+<div class="header">
+		<div class="logo">
+			<span>心情日记</span>
+			<span>mood diary</span>
+		</div>
+		<ul class="b_else">
+           {% if user.is_authenticated %}
+                <li><a href={% url "record:detail" user.id%}?num=1>{{ user.username }}</a>
+                <li><a href={% url "userprofile:logout" %}>退出</a>
+                <li><a href={% url "userprofile:center" user.id%}>个人中心</a>
+                <li><a href={% url "userprofile:create" user.id%}>发布</a>
+                <li><a href="#">交流社区</a>
+            {% else %}
+                <li><a href={% url "userprofile:register" %}>注册</a>
+                <li><a href={% url "userprofile:login" %}>登录</a>
+            {% endif %}
+		</ul>
+</div>

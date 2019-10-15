@@ -1,0 +1,177 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url('../images/d_bg02.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment:fixed;
+}
+.header{
+	margin: 0 auto 0;
+	width: 90%;
+	height: 70px;
+
+}
+
+.menu{
+	width: 40%;
+	height: 70px;
+	float: left;
+
+}
+.menu img{
+	margin-top: 15px;
+}
+.menu_btn{
+	width: 60%;
+	height: 70px;
+	float: right
+
+}
+.menu_btn .line{
+
+	margin-bottom: 5px; 
+	height: 1px;
+	width: 30px;
+	border: 1px solid black;
+	background-color: black;
+}
+
+.menu_btn .line_con{
+	width: 30px;
+	margin-top: 29px;
+	height: 40px;
+	cursor: pointer;
+}
+
+
+
+.mid_con{
+	height: 700px;
+	width: 90%;
+	margin: 0 auto 0;
+	color: #fff;
+	/* background-color: pink; */
+
+}
+
+.mid_left{
+	width: 35%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	/* background-color: blue; */
+
+}
+
+.mid_left .cal{
+	width: 46%;
+	height: 40%;
+	/* background-color: pink; */
+	display: inline-block;
+
+}
+
+.cal .day{
+	height: 80%;
+	font-size: 170px;
+	
+}
+
+.cal .month{
+	padding-left: 20px;
+	line-height: 20%;
+	font-size: 20px;
+	outline: none;
+
+}
+
+.mid_left .share{
+	text-align: center;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #FFEFDB;
+	float: right;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 0 5px #FFEFDB;
+	margin-top: 20px;
+}
+
+.mid_left .pre_time{
+	margin-top:160px;
+	width:120px;
+	float: right;
+	overflow: hidden;
+}
+
+.mid_left .cut_line{
+	height: 1px;
+	background-color: #FF6A6A;
+}
+
+.mid_left .content{
+	height: 60%;
+	/* background-color: pink; */
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+.content .content_logo{
+	margin-top: 30px;
+	margin-left: 20px;
+	font-size: 13px;
+	color: #fff;
+	width: 300px;
+	height: 50px;
+	font-style: italic;
+}
+
+.content .content_title{
+	height: 50px;
+	font-size: 30px;
+	margin-left: 20px;
+}
+
+.content .content_con{
+	margin-left: 20px;
+}
+
+
+.mid_right{
+	/* display: inline-block; */
+	width: 600px;
+	height: 500px;
+	/* background-color: gold; */
+	float: left;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-left: 100px;
+	margin-top: 50px;
+	background-image: url('../images/d_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.song_name{
+	margin: 20px auto 0;
+	width: 300px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 20px;
+	
+}
+
+.bgMusic{
+	width:300px;
+	display: block;
+	margin: 300px auto 0;
+	bottom: 50px;
+}

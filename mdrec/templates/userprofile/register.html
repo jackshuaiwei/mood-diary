@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+    {% block title %}注册{% endblock title %}
+    {% block link %}
+	    <link rel="stylesheet" type="text/css" href={% static "css/register.css" %}>
+    {% endblock link %}
+    {% block content %}
+    <style>
+    .header{
+        border:0;
+    }
+    </style>
+
+	<div class="login_title">
+		<div class="login_logo">Mood Diary</div>
+		<div class="login_desc1">
+			你的所有努力都应该活成自己喜欢的样子
+
+		</div>
+		<div class="login_desc2">
+			All your efforts should live up to what you like.
+		</div>
+
+	</div>
+
+
+	<div class="input_form">
+		<div class="l_header">
+			用户注册
+            <div class="err">{{ form.get_errors }}{{ message }}</div>
+		</div>
+
+		<form action="." method="POST">
+            {% csrf_token %}
+            {{ form.username | add_class:"username"}}
+{#              <input type="text" name="username" class="username" placeholder="请输入用户名">#}
+              <br />
+            {{ form.password | add_class:"password"}}
+{#              <input type="text" name="password" class="password" placeholder="请输入密码">#}
+              <br />
+            {{ form.password2 | add_class:"password"}}
+            <br>
+            {{ form.email |add_class:"email"}}
+{#              <input type="email" class="email" placeholder="邮箱">#}
+              <br>
+
+              <input type="submit" class="login_sub" value="注册">
+	    </form>
+
+	</div>
+{% endblock content %}

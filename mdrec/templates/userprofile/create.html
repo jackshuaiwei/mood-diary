@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+    {% block title %}创作页面{% endblock title %}
+    {% block link%}<link rel="stylesheet" type="text/css" href={% static "css/create.css" %}>{% endblock link%}
+    {% block content %}
+	<div class="con">
+		<form action="." method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+			<div class="c_title">Title</div>
+			{{ form.title | add_class:"title"}}
+			  <br />
+			  <div class="c_title">创作内容</div>
+            {{ form.media }}
+			  {{ form.content | add_class:"content" }}
+			  <br />
+			  <br />
+			  <div class="c_title">歌曲链接</div>
+			  {{ form.song_url | add_class:"song_url"}}
+			  <br>
+{#			  <div class="c_title">图片上传</div>#}
+{#			  <br>#}
+{#            <div class="c_img_con">#}
+{#			  	<div class="c_img">#}
+{#			  		选择文件#}
+{#			  	</div>#}
+{#			  	{{ form.bg_img |add_class:"bg_img"}}#}
+{#			  </div>#}
+
+			  <input type="submit" class="create_sub" value="完成">
+		</form>
+	</div>
+
+	<div class="c_logo">
+		<div class="c_desc1">
+			MOOD DIRAY
+		</div>
+		<div class="c_desc2">
+			wish you happy every day,best wishes from mood diray~
+		</div>
+		<br>
+	</div>
+{% endblock content %}

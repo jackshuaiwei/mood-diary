@@ -1,0 +1,44 @@
+body{
+	background-image: url("../images/index03.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment:fixed;
+	position: relative;
+}
+
+.welcom{
+	width: 500px;
+	height: 500px;
+	margin: 80px 0 0 20px;
+	/* background-color: blue; */
+	/* position: absolute; */
+	/* right: 100px; */
+	color: #fff;
+}
+
+.top{
+	text-align: center;
+	font-size: 60px;
+	font-family:'Agnes-Bold';
+}
+
+.mid{
+	text-align: center;
+	font-size: 23px;
+	font-family:'SiYuan-ExtraLig1c6eeadee2208c3';
+	
+}
+.btom{
+	text-indent: 30px;
+	margin: 20px auto 0;
+	width: 300px;
+	height: 500px;
+	/* background-color: gold; */
+}
+.btom a{
+	color: #9A32CD;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 26px;
+}

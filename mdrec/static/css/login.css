@@ -1,0 +1,91 @@
+body{
+	background-image: url('../images/login_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment:fixed;
+}
+
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #fff; 
+}
+
+.login_title{
+	width: 400px;
+	margin: 50px auto 0;
+	color: #fff;
+}
+
+.login_logo{
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+
+}
+.login_desc1{
+	text-align: center;
+	font-size: 12px;
+}
+
+.login_desc2{
+	text-align: center;
+	font-size: 12px;
+	font-style: italic;
+}
+
+
+.input_form{
+	width: 400px;
+	height: 400px;
+	margin: 30px auto 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	color: white;
+}
+
+.l_header, .username, .password, .email, .login_sub{
+	margin: 0 auto 0;
+}
+
+
+.l_header{
+	width: 90%;
+	margin : 0 auto 0;
+	height: 70px;
+	/* background-color: blue;*/
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 70px;
+
+}
+.username, .password, .email{
+	display: block;
+	width: 90%;
+	height: 50px;
+	border: 0;
+	outline: none;
+	border-bottom: 1px solid white;
+	background-color: rgba(0, 0, 0, 0);
+	color: #fff;
+	font-size: 16px;
+}
+
+.input_form .login_sub{
+	display: block;
+	border: 0;
+	padding: 0;
+	width: 90%;
+	height: 40px;
+	outline: none;
+	border-radius: 10px;
+	background-color: blue;
+	color: white;
+
+}
+.err{
+
+	float: right;
+	font-size: 15px;
+
+}
